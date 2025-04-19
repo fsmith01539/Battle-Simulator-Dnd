@@ -9,7 +9,7 @@ TARGET = app
 SRCS = $(wildcard src/*.cpp)
 OBJS = $(patsubst src/%.cpp, $(BUILD_DIR)/%.o, $(SRCS))
 
-CPP_FLAGS = -Iinclude
+CPP_FLAGS = -Iinclude -Wall 
 
 $(BUILD_DIR)/$(TARGET): $(OBJS)
 	$(CPP) $^ -o $@

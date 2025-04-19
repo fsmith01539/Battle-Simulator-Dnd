@@ -17,3 +17,12 @@ std::vector<unsigned> roll_xdN(unsigned int x, unsigned int N) {
   }
   return result;
 }
+
+unsigned sum_roll_xdN(unsigned x, unsigned N) {
+  std::vector<unsigned> rolls = roll_xdN(x, N);
+  unsigned r = 0;
+  for (unsigned roll : rolls) {
+    r += roll;
+  }
+  return r;
+}
